@@ -1,15 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import RaisedButton from "material-ui/RaisedButton";
-import Menu from "../containers/Menu";
-import GridInline from "../components/grid_inline";
+
+import FlexWrapper from "./grid/flex_wrapper";
+import FlexColumn from "./grid/flex_column";
+import SideBar from "./SideBar/SideBar";
+import Map from "./Map/Map";
 
 const App = props => (
-  <div>
-    <Menu />
-    <RaisedButton label={props.buttonText} onClick={props.onClick} />
-    <GridInline />
-  </div>
+  <FlexWrapper>
+    <SideBar />
+    <FlexColumn width="12">
+      <Map />
+    </FlexColumn>
+  </FlexWrapper>
 );
 
 App.propTypes = {

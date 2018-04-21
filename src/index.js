@@ -22,13 +22,11 @@ ReactDOM.render(
   <MuiThemeProvider muiTheme={muiTheme}>
     <Provider store={store}>
       <ConnectedRouter history={history}>
-        <div>
-          <Switch>
-            <Route path="/c" component={AppC} />
-            <Route path="/b" component={AppB} />
-            <Route path="/" component={App} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/c" component={AppC} />
+          <Route path="/b" component={AppB} />
+          <Route path="/" component={App} />
+        </Switch>
       </ConnectedRouter>
     </Provider>
   </MuiThemeProvider>,
